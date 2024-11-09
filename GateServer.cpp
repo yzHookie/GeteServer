@@ -17,6 +17,7 @@ int main() {
           ioc.stop();
         });
     std::make_shared<CServer>(ioc, port)->Start();
+    spdlog::info("Gate Server listen on port: {}", port);
     ioc.run();
   } catch (std::exception const& e) {
     std::cerr << "Error: " << e.what() << std::endl;

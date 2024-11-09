@@ -16,7 +16,7 @@ void CServer::Start() {
       }
       // 在专门监听读写的连接中, HttpConnection 管理这个连接
       std::make_shared<HttpConnection>(std::move(self->socket_))->Start();
-
+      // 继续监听，否则只能有一个客户端连接
       self->Start();
     } catch (std::exception& exp) {
     }

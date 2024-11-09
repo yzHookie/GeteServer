@@ -4,8 +4,10 @@
 #include <boost/asio.hpp>
 #include <boost/beast.hpp>
 #include <boost/beast/http.hpp>
-#include <memory>
 #include <map>
+#include <memory>
+#include <unordered_map>
+
 #include "singleton.h"
 namespace beast = boost::beast;
 namespace http = beast::http;

@@ -5,6 +5,14 @@
 LogicSystem::LogicSystem() {
   ReqGet("/get_test", [](std::shared_ptr<HttpConnection> connection) {
     beast::ostream(connection->response_.body()) << "receive get_test req";
+    int index = 0;
+    for (auto& elem : connection->get_params_) {
+      index++;
+      beast::ostream(connection->response_.body())
+          << "param " << index << "key is " << elem.first;
+      beast::ostream(connection->response_.body())
+          << ", param " << index << "value is " << elem.second << std::endl;
+    }
   });
 }
 bool LogicSystem::HandleGet(const std::string& path,
