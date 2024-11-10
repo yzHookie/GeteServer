@@ -128,16 +128,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="const.h" />
-    <ClInclude Include="CServer.h" />
-    <ClInclude Include="HttpConnection.h" />
-    <ClInclude Include="LogicSystem.h" />
+    <ClInclude Include="c_server.h" />
+    <ClInclude Include="http_connection.h" />
+    <ClInclude Include="logic_system.h" />
+    <ClInclude Include="proto\message.grpc.pb.h" />
+    <ClInclude Include="proto\message.pb.h" />
     <ClInclude Include="singleton.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CServer.cpp" />
-    <ClCompile Include="GateServer.cpp" />
-    <ClCompile Include="HttpConnection.cpp" />
-    <ClCompile Include="LogicSystem.cpp" />
+    <ClCompile Include="c_server.cc" />
+    <ClCompile Include="gate_server.cc" />
+    <ClCompile Include="http_connection.cc" />
+    <ClCompile Include="logic_system.cc" />
+    <ClCompile Include="proto\message.grpc.pb.cc" />
+    <ClCompile Include="proto\message.pb.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="proto\message.proto" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

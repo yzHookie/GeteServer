@@ -1,6 +1,6 @@
-#include "CServer.h"
+#include "c_server.h"
 
-#include "HttpConnection.h"
+#include "http_connection.h"
 CServer::CServer(boost::asio::io_context& ioc, unsigned short& port)
     : ioc_(ioc), acceptor_(ioc, tcp::endpoint(tcp::v4(), port)), socket_(ioc) {}
 

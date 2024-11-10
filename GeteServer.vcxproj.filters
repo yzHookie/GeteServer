@@ -15,34 +15,49 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CServer.h">
+    <ClInclude Include="c_server.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="const.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="HttpConnection.h">
+    <ClInclude Include="http_connection.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="LogicSystem.h">
+    <ClInclude Include="logic_system.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="singleton.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="proto\message.grpc.pb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="proto\message.pb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CServer.cpp">
+    <ClCompile Include="c_server.cc">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="HttpConnection.cpp">
+    <ClCompile Include="http_connection.cc">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="LogicSystem.cpp">
+    <ClCompile Include="logic_system.cc">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GateServer.cpp">
+    <ClCompile Include="gate_server.cc">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="proto\message.grpc.pb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="proto\message.pb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="proto\message.proto" />
   </ItemGroup>
 </Project>

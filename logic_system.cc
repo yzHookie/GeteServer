@@ -1,6 +1,6 @@
-#include "LogicSystem.h"
+#include "logic_system.h"
 
-#include "HttpConnection.h"
+#include "http_connection.h"
 
 LogicSystem::LogicSystem() {
   ReqGet("/get_test", [](std::shared_ptr<HttpConnection> connection) {
