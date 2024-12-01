@@ -1,8 +1,12 @@
 #include <iostream>
 
 #include "c_server.h"
+#include "config_mgr.h"
 
 int main() {
+  ConfigMgr& g_cfg_mgr = ConfigMgr::Inst();
+  std::string gate_port_str = g_cfg_mgr["GateServer"]["Port"];
+  unsigned short gate_port = std::atoi(gate_port_str.c_str());
   try {
     unsigned short port = static_cast<unsigned short>(8080);
     net::io_context ioc{1};

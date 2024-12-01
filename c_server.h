@@ -12,5 +12,4 @@ class CServer : public std::enable_shared_from_this<CServer> {
   tcp::acceptor acceptor_;
   // 没有拷贝
   net::io_context& ioc_;
-  tcp::socket socket_;
 };

@@ -1,6 +1,7 @@
 #include "logic_system.h"
 
 #include "http_connection.h"
+#include "verify_grpc_client.h"
 
 LogicSystem::LogicSystem() {
   ReqGet("/get_test", [](std::shared_ptr<HttpConnection> connection) {
@@ -43,6 +44,8 @@ LogicSystem::LogicSystem() {
       return true;
     }
     auto email = src_root["email"].asString();
+    // 通过 grpc，向 varify 服务发请求
+    GetVarifyRsp rsp = VerifyGrpcClient::GetInstance()->GetVarifyCode(email);
     spdlog::info("email is {}", email);
     root["error"] = 0;
     root["email"] = src_root["email"];

@@ -36,6 +36,15 @@
     <ClInclude Include="proto\message.pb.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="verify_grpc_client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config_mgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="asio_ioservice_pool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="c_server.cc">
@@ -56,8 +65,19 @@
     <ClCompile Include="proto\message.pb.cc">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="verify_grpc_client.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="config_mgr.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="asio_ioservice_pool.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="proto\message.proto" />
+    <None Include="config.ini" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

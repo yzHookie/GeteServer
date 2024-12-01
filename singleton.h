@@ -15,7 +15,7 @@ class Singleton {
   static std::shared_ptr<T> GetInstance() {
     static std::once_flag s_flag;
     std::call_once(s_flag, [&]() {
-      // note: 这里不用 std::make_shared 的原因
+      // note: 这里不用 std::make_shared 的原因(访问控制)
       instance_ = std::shared_ptr<T>(new T);
     });
     return instance_;

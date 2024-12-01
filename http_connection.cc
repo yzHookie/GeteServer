@@ -2,8 +2,7 @@
 
 #include "logic_system.h"
 // socket 只有移动构造
-HttpConnection::HttpConnection(tcp::socket socket)
-    : socket_(std::move(socket)) {}
+HttpConnection::HttpConnection(boost::asio::io_context& ioc) : socket_(ioc) {}
 
 void HttpConnection::Start() {
   auto self = shared_from_this();
@@ -23,6 +22,8 @@ void HttpConnection::Start() {
                      }
                    });
 }
+
+tcp::socket& HttpConnection::GetSocket() { return socket_; }
 
 void HttpConnection::CheckDeadline() {
   auto self = shared_from_this();
