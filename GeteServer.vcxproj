@@ -136,6 +136,7 @@
     <ClInclude Include="logic_system.h" />
     <ClInclude Include="proto\message.grpc.pb.h" />
     <ClInclude Include="proto\message.pb.h" />
+    <ClInclude Include="redis_mgr.h" />
     <ClInclude Include="singleton.h" />
     <ClInclude Include="verify_grpc_client.h" />
   </ItemGroup>
@@ -148,6 +149,7 @@
     <ClCompile Include="logic_system.cc" />
     <ClCompile Include="proto\message.grpc.pb.cc" />
     <ClCompile Include="proto\message.pb.cc" />
+    <ClCompile Include="redis_mgr.cc" />
     <ClCompile Include="verify_grpc_client.cc" />
   </ItemGroup>
   <ItemGroup>

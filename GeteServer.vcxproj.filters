@@ -45,6 +45,9 @@
     <ClInclude Include="asio_ioservice_pool.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="redis_mgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="c_server.cc">
@@ -72,6 +75,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="asio_ioservice_pool.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="redis_mgr.cc">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
