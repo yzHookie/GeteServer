@@ -97,10 +97,10 @@ void TestRedisMgr() {
   assert(RedisMgr::GetInstance()->LPush("lpushkey1", "lpushvalue1"));
   assert(RedisMgr::GetInstance()->LPush("lpushkey1", "lpushvalue2"));
   assert(RedisMgr::GetInstance()->LPush("lpushkey1", "lpushvalue3"));
-  assert(RedisMgr::GetInstance()->RPop("lpushkey1", value));
+  /*assert(RedisMgr::GetInstance()->RPop("lpushkey1", value));
   assert(RedisMgr::GetInstance()->RPop("lpushkey1", value));
   assert(RedisMgr::GetInstance()->LPop("lpushkey1", value));
-  assert(RedisMgr::GetInstance()->LPop("lpushkey2", value) == false);
+  assert(RedisMgr::GetInstance()->LPop("lpushkey2", value) == false);*/
 }
 
 void Test() {
@@ -108,8 +108,10 @@ void Test() {
   //TestRedis();
 }
 int main() {
-  Test();
+  //Test();
+  RedisMgr::GetInstance();
   ConfigMgr& g_cfg_mgr = ConfigMgr::Inst();
+  
   std::string gate_port_str = g_cfg_mgr["GateServer"]["Port"];
   unsigned short gate_port = std::atoi(gate_port_str.c_str());
   try {

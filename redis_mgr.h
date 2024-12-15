@@ -140,7 +140,7 @@ class RedisConPool {
         std::cout << "认证成功" << std::endl;
         connections_.push(context);
       }
-    }
+    }  
   }
   std::atomic<bool> b_stop_;
   size_t poolSize_;
